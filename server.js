@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const MongoClient = require("mongodb").MongoClient;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -25,3 +26,5 @@ app.post("/quotes", (req, res) => {
   console.log(req.body);
   console.log("card");
 });
+
+MongoClient.connect("mongodb-connection-string", (err, client) => {});
