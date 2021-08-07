@@ -23,4 +23,5 @@ app.get("/", (req, res) => {
 
 app.post("/quotes", (req, res) => {
   console.log(req.body);
+  console.log("card");
 });
